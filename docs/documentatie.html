@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML Report</title>
+
+    <link rel="stylesheet" href="https://w3c.github.io/scholarly-html/css/scholarly.min.css">
+    <script src="https://w3c.github.io/scholarly-html/js/scholarly.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <project>AcVis</project> Raport - Scholarly HTML
+        </h1>
+    </header>
+
+    <div role="contentinfo">
+        <dl>
+            <dt>Authors</dt>
+            <dd>
+                <a target="_blank">Andriesei Beniamin-Andrei,</a>
+                <a target="_blank">Grigore Valerian</a>
+            </dd>
+        </dl>
+    </div>
+
+    <!--1.Introduction-->
+    <section id="introduction" role="doc-introduction">
+        <h2>Introducere</h2>
+        <section id="purpose">
+            <!-- review? -->
+            <h3>Scop</h3>
+            <p>
+                Acest document prezinta detalii functionalitatile produsului AcVis , un website despre nominalizarea
+                unor vedete, despre interfata si despre utilitatea acestuia.
+            </p>
+        </section>
+
+        <section id="conventions">
+            <h3>Conventiile documentului</h3>
+            <p>
+                Documentul este impartit in mai multe parti, cu importanta egala: Introducere, Descriere, Interfata,
+                Caracteristici ale sistemului si alte referinte. Nu sunt
+                folosite abrevieri sau alte metode de scriere care nu pot fi intelese.
+            </p>
+        </section>
+        <section id="intended-audience">
+            <h3>Publicul vizat si sugestii de lectura</h3>
+            <p>
+                Cititorii acestui document pot fi manageri de proiect si dezvoltatori care au nevoie sa acceseze
+                detaliile tehnice dar si utilizatori sau persoane care sunt
+                interesate de acest subiect. In acest scop, partea de introducere a documentului ofera informatiile
+                necesare pentru o persoana sa decida daca lucrurile scrise
+                aici merita citite in profunzime.
+            </p>
+        </section>
+        <section id="product-scope">
+            <h3>Domeniul de aplicare a produsului</h3>
+            <p>
+                Scopul acestui produs este de a oferi persoanelor interesate de actori informatii legate de
+                nominalizarea acestora la premiul Screen Actors Guid (SAG) Awards.
+                De asemenea, produsul ofera stiri cu privire la fiecare nominalizare in parte.
+            </p>
+        </section>
+        <section id="rferences">
+            <h3>Referinte</h3>
+            <p>
+                <a href="https://www.themoviedb.org/documentation/api">https://www.themoviedb.org/documentation/api</a>
+                <br>
+                <a
+                    href="https://www.kaggle.com/datasets/unanimad/screen-actors-guild-awards/data">https://www.kaggle.com/datasets/unanimad/screen-actors-guild-awards/data</a>
+                <br>
+                <a href="https://newsapi.org/">https://newsapi.org/</a>
+            </p>
+        </section>
+    </section>
+
+    <!-- 2. Description -->
+    <section id="description" role="doc-introduction">
+        <h2>Descriere generala</h2>
+        <section id="perspective">
+            <h3>Perspectiva produsului</h3>
+            <p>
+                Produsul este un instrument web de vizualizare flexibilă a datelor referitoare la nominalizările
+                actorilor la Screen Actors Guid (SAG) Awards, care utilizează un API REST
+                propriu dezvoltat și preia informațiile suplimentare despre fiecare actor de la The Movie Database
+                (TMDb).
+                Scopul acestui produs este de a oferi utilizatorilor o platformă interactivă și ușor de utilizat pentru
+                a vizualiza datele și statisticele referitoare la nominalizările SAG Awards.
+                In plus, produsul va oferi suport pentru redarea de știri privitoare la fiecare nominalizat în parte, pe
+                baza unor surse externe de date configurabile în cadrul aplicației
+                dezvoltate.
+                Acest produs este un produs nou, de sine stătător și nu face parte dintr-o familie de produse existente.
+            <p>C1</p>
+            <center><img src="c1.png" class="center" width="500px" height="600px"></center>
+            </p>
+        </section>
+
+        <section id="functions">
+            <h3>Functiile Produsului</h3>
+            <p>
+                Mai jos este o reprezentare generala a componentelor principale ale aplicatiei si modul in care acestea
+                sunt legate intre ele:
+            <ul>
+                <li>Vizualizarea flexibilă a datelor referitoare la nominalizările actorilor prin intermediul unui API
+                    REST/GraphQL propriu dezvoltat.</li>
+                <li>Prelucrarea informațiilor referitoare la fiecare actor și producție prin intermediul unei baze de
+                    date SQLite.</li>
+                <li>Generarea de statistici și vizualizări în minim trei moduri diferite.</li>
+                <li>Exportarea datelor generate în formatele CSV, WebP și SVG.</li>
+                <li>Redarea de știri privitoare la fiecare nominalizat in parte, pe baza unor surse externe de date
+                    configurabile in cadrul aplicatiei dezvoltate.</li>
+            </ul>
+            <p>C2</p>
+            <img src="c2.png" class="center" width="500px" height="600px">
+            <p>C3</p>
+            <img src="c3.png" class="center" width="700px" height="600px">
+            </p>
+        </section>
+        <section id="user-classes">
+            <h3>Clase si caracteristici ale utilizatorilor</h3>
+            <p>
+                Utilizatorii care vor accesa site-ul pot sa gaseasca informatii, sa caute actori, sa citeasca stiri si
+                sa ne contacteze prin pagina de contact.
+                Administratorul va putea sa stearga useri.
+            </p>
+        </section>
+        <section id="operating-environment">
+            <h3>Mediul de operare</h3>
+            <p>
+                Fiind o aplicatie web, aceasta va putea rula pe toate sistemele de operare ce suporta un browser cum ar
+                fi: Android, IOS, Windows, Linux.
+            </p>
+        </section>
+        <section id="constraints">
+            <h3>Constrangeri</h3>
+            <p>
+                Avand in vedera faptul ca aplicatia este in stransa legatura cu o baza de date externa posibile
+                defectiuni ale acesteia vor avea un impact negativ asupra site-ului,
+                informatiile fiind principalul scop al acestia. Din acest motiv vom salva statisticile la fiecare
+                modificare pentru a nu se pierde.
+            </p>
+
+        </section>
+        <section id="user-documentation">
+            <h3>Documentatia utilizatorului</h3>
+            <p>
+                Daca userii vor intampina dificultati in timpul folosirii aplicatiei vor putea cere ajutor sau trimite
+                plangeri pe pagina de contact.
+            </p>
+        </section>
+
+    </section>
+
+    <!--3.External Interface Requirements-->
+    <section id="interfaces">
+        <h2>Interfete externe</h2>
+        <section id="user-interfaces">
+            <h3>Interfata pentru utlizator</h3>
+            <p>
+                Interfața utilizatorului va fi o aplicație web. Caracteristicile logice ale interfeței vor include:
+            <ul>
+                <li>
+                    Un meniu principal de navigare pentru a accesa diferite funcționalități ale aplicației, cum ar fi
+                    vizualizarea actorilor, vizualizarea statisticelor si exportarea datelor,
+                    accesarea știrilor despre fiecare nominalizat si o pagina de contact cu email si nr de telefon.
+                </li>
+                <img src="s1.png" class="center" width="700px" height="400px">
+                <li>Optiuni de filtrare / sortare si cautare a actorilor.</li>
+                <img src="s2.png" class="center" width="700px" height="400px">
+                <li>Opțiuni pentru exportul datelor în formatele CSV, WebP și SVG.</li>
+                <img src="s3.png" class="center" width="700px" height="400px">
+                <li>Vizualizări grafice ale datelor in 3 moduri diferite si personalizarea lor intr-un mod dinamic.</li>
+                <img src="s4.png" class="center" width="700px" height="400px">
+                <li>Vizualizarea si cautarea de stiri despre fiecare actor in parte.</li>
+                <img src="s5.png" class="center" width="700px" height="400px">
+                <li>Pagina de contact cu email si telefon.</li>
+                <img src="s6.png" class="center" width="700px" height="400px">
+                <li>Posibilitatea de a te loga in aplicatie.</li>
+                <img src="s7.png" class="center" width="700px" height="400px">
+            </ul>
+            </p>
+        </section>
+        <section id="hardware-interfaces">
+            <h3>Interfete hardware</h3>
+            <p>
+                Website-ul nostru va putea fi accesat de pe o gama larga de dispozitive, precum monitoare desktop,
+                laptopuri, tablete si telefoane mobile. Website-ul este optimizat pentru a se adapta la dimensiunile si
+                rezolutiile corespunzatoare astfel incat sa asigure o experienta optima pentru utilizatori.
+            </p>
+        </section>
+        <section id="software-interfaces">
+            <h3>Interfete software</h3>
+            <p>
+                Aplicatia Web va fi dezvoltata ca un instrument de vizualizare a datelor referitoare la
+                nominalizarile actorilor la premiile Screen Actors Guid. </p>
+            <p>Baza de date folosita va fi phpMyAdmin, din care vor fi preluate datele despre actori(nume,
+                editia ceremoniei de premiere SAG, categoria, daca a castigat sau nu un premiu si rank-ul) utilizate in
+                generarea statisticilor. Aceste statistici vor fi generate in 3 maniere.</p>
+            <p>Statisticile vor putea fi exportate in formatele: CSV(Comma-separated values), WebP si
+                SVG(Scalable Vector Graphics).</p>
+            <p>Website-ul se va afla in stransa legatura cu The Movie Database(TMDb), de unde vor fi preluate
+                orice informatii suplimentare necesare referitoare la actorii prezentati.</p>
+            <p>Aplicatia Web ofera posibilitatea de a descoperi stirile relevante despre actorii favoriti,
+                putand de asemenea sa acceseze sursele externe pentru a citi intreaga stire selectata.</p>
+            <p>
+                Partea de Frontend este realizata in HTML5, CSS si Javascript.
+                Partea de backend va fi realizata in PHP.
+
+            </p>
+        </section>
+
+        <section id="communication-interfaces">
+            <h3>Interfete de comunicare</h3>
+            <p>
+                Este necesară o interfață API REST pentru comunicarea între clientul web si serverul de retea.
+                Această interfata trebuie sa permita interogarea datelor despre nominalizarile actorilor si filmele
+                asociate acestora, precum si exportul acestor date în formatele CSV, WebP si SVG. De asemenea, trebuie
+                sa ofere posibilitatea de a reda stiri despre fiecare nominalizat in parte, bazate pe surse externe
+                configurabile în cadrul aplicatiei.
+            </p>
+        </section>
+    </section>
+
+    <!--4.System Features-->
+    <section id="system-features">
+        <!-- review? -->
+        <h2>Functionalitati</h2>
+        <section id="search">
+            <h3>Cautare avansata si aplicarea de filtre</h3>
+            <section id="id">
+                <h3> Descriere si prioritate</h3>
+                <p>
+                    Cautare avansata si aplicarea de filtre este o caracteristică importantă pentru utilizatorii noștri
+                    și
+                    are o prioritate ridicată în ceea ce privește dezvoltarea produsului. Această caracteristică oferă o
+                    interfață simplă și eficientă pentru utilizatori, permițându-le să găsească rapid informații
+                    relevante
+                    în baza de date.
+                </p>
+            </section>
+            <section id="idd">
+                <h3> Secvente de stimuli/raspunsuri</h3>
+                <p>
+                <ul>
+                    <li>Accesarea căutării avansate prin intermediul paginii Actors din meniului principal. </li>
+                    <li>Completarea formularului cu criterii de căutare, cum ar fi cuvinte cheie.</li>
+                    <li>Aplicarea diverselor filtre asupra categoriei de inforamtii cautate.</li>
+                    <li>Apăsarea butonului "Sort" pentru a efectua sortarea.</li>
+                    <li>Afisarea rezultatelor căutării, conform criteriilor specificate de utilizator.</li>
+                    <li>Afisarea mesajelor de eroare, dacă criteriile de căutare nu sunt valide sau dacă există probleme
+                        tehnice.</li>
+                </ul>
+                </p>
+            </section>
+            <section id="iddd">
+                <h3>Cerinte functionale</h3>
+                <p>
+                <ul>
+                    <li>Să ofere o interfață grafică utilizatorului pentru a introduce criteriile de căutare și pentru a
+                        vizualiza
+                        rezultatele căutării. </li>
+                    <li>Să accepte o gamă largă de criterii de căutare, inclusiv cuvinte cheie, nume, categorie și alte
+                        filtre personalizate.</li>
+                    <li>Să returneze rapid și precis rezultatele căutării.</li>
+                    <li>Să ofere posibilitatea de a sorta și de a filtra rezultatele căutării.</li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+        <section id="statistics">
+            <h3>Generarea, vizualizarea si exportarea de statistici</h3>
+            <section id="iddm">
+                <h3>Descriere si prioritate:</h3>
+                <p>
+                    Această caracteristică permite utilizatorilor să genereze, vizualizeze și exporteze
+                    diverse statistici pentru datele stocate în produs. Aceasta are o prioritate medie și este
+                    importantă pentru utilizatorii care doresc să analizeze datele lor.
+                </p>
+            </section>
+            <section id="idds">
+                <h3>Secvente de stimuli/raspunsuri:</h3>
+                <p>
+                    Utilizatorul poate accesa din meniul de navigare: Statistics, unde isi poate alege tipul de
+                    statistică pe care dorește să o genereze. Produsul va procesa datele și va afișa statistica
+                    generată. Utilizatorul poate vizualiza statisticile în produs și poate alege să le exporteze
+                    într-un format specificat.
+                </p>
+            </section>
+            <section id="idsn">
+                <h3>Cerințe functionale:</h3>
+                <ul>
+                    <li>
+                        Produsul trebuie să ofere posibiltatea de sortare a datelor dupa diferse caracteristici(an,
+                        categorie, nume, show, rank).
+                    </li>
+                    <li> Produsul trebuie să ofere o interfață de vizualizare pentru statisticile generate, inclusiv
+                        grafice și
+                        diagrame relevante. </li>
+                    <li>Produsul trebuie să permită utilizatorilor să exporte statisticile generate într-un format
+                        specificat
+                        (CSV, WebP și SVG). </li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="statistics2">
+            <h3>Selectarea dinamică a caracteristicilor statisticii și exportarea datelor</h3>
+            <section id="iddm">
+                <h3>Descriere si prioritate:</h3>
+                <p>
+                    Funcționalitatea de selectare dinamică a caracteristicilor statisticii permite utilizatorilor să
+                    aleagă anumite caracteristici sau variabile pentru a genera statistici personalizate. Utilizatorii
+                    pot apoi exporta datele cu selecțiile făcute într-un format specific. Aceasta are o prioritate
+                    medie.
+                </p>
+            </section>
+            <section id="idds">
+                <h3>Secvente de stimuli/raspunsuri:</h3>
+                <p>
+                    Utilizatorul accesează secțiunea "Statistics" din meniul principal al aplicației.
+                    In functie de statistica, utilizatorul poate selecta o anumita variabila din listă sau poate
+                    introduce valori intr-un camp.
+                    După ce utilizatorul finalizează selecțiile, apasă butonul "Generate Chart".
+                    Aplicația procesează selecțiile utilizatorului și generează statistici bazate pe acestea.
+                    Utilizatorul are opțiunea de a exporta statisticile generate într-un format specific.
+                </p>
+            </section>
+            <section id="idsn">
+                <h3>Cerințe functionale:</h3>
+                <ul>
+                    <li>
+                        Aplicația trebuie să ofere utilizatorilor o listă de valori disponibile pentru generarea de
+                        statistici.
+                    </li>
+                    <li>Selectia utilizatorului trebuie să fie procesate pentru a genera statistici personalizate. </li>
+                    <li>Aplicația trebuie să ofere opțiunea utilizatorilor de a exporta statisticile generate într-un
+                        format specific.</li>
+                    <li>Fișierul exportat trebuie să conțină datele relevante, respectând selecțiile făcute de către
+                        utilizator în cadrul caracteristicilor statisticii. </li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="news">
+            <h3>Cautarea si redarea stirilor pentru fiecare nominalizat </h3>
+            <section id="idssc">
+                <h3>Descriere si prioritate:</h3>
+                <p>
+                    Această caracteristică oferă utilizatorilor posibilitatea de a fi mereu la curent cu ultimele știri
+                    legate de fiecare nominalizat în parte, utilizând surse externe de date configurabile. Aceasta are
+                    o prioritate medie, deoarece nu este esențială pentru funcționarea de bază a aplicației, dar adaugă
+                    valoare experienței utilizatorului.
+                </p>
+            </section>
+            <section id=" msjcn">
+                <h3>Secvente de stimuli/raspunsuri:</h3>
+                <p>
+                    Pentru a accesa știrile legate de un anumit nominalizat, utilizatorul poate selecta butonul din
+                    cadrul meniului de navigare News unde va avea posibilitatea de a cauta si de vedea stirile relevante
+                    despre
+                    fiecare nominalizat in parte.
+                </p>
+
+            </section>
+            <section id=" jds">
+                <h3>Cerinte functionale:</h3>
+                <ul>
+                    <li>Aplicația trebuie să integreze o sursă de știri sau un API de știri pentru a obține articole
+                        relevante despre nominalizați.</li>
+                    <li>Căutarea în sursele de știri trebuie să fie realizată pe baza numelui sau altor informații
+                        relevante despre nominalizați.</li>
+                    <li>
+                        Capacitatea de a afișa știrile relevante în cadrul aplicației.
+                    </li>
+                    <li>
+                        Capacitatea de a permite utilizatorilor să acceseze sursele externe pentru a citi întreaga
+                        știre.
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+
+        <section id="user-change">
+            <h3>Schimbarea numelui și parolei utilizatorului</h3>
+            <section id=" jfd">
+                <h3>Descriere si prioritate:</h3>
+                <p>Funcționalitatea de schimbare a numelui și parolei utilizatorului permite utilizatorilor să modifice
+                    username-ul si parola în cadrul aplicației. Aceasta are o prioritate medie.</p>
+            </section>
+            <section id=" d">
+                <h3> Secvente de stimuli/raspunsuri: </h3>
+                <p>
+                    a) Schimbarea numelui:
+                    Utilizatorul autentificat accesează pagina "Change Username".
+                    Utilizatorul introduce noul nume într-un câmp de text dedicat.
+                    După ce utilizatorul completează noul nume și apasă butonul "Change", numele sau va fi actualizate
+                    cu noul nume.
+                </p>
+                <p>
+                    b) Schimbarea parolei:
+                    Utilizatorul autentificat accesează pagina "Change Password".
+                    Utilizatorul introduce parola actuală și noua parolă în câmpurile corespunzătoare.
+                    După ce utilizatorul completează informațiile și apasă butonul "Change", parola contului
+                    utilizatorului este actualizată cu noua valoare.
+                </p>
+            </section>
+            <section id=" fs">
+                <h3>Cerinte functionale</h3>
+                <ul>
+                    <li>
+                        a) Schimbarea numelui:
+                        Aplicația trebuie să permită utilizatorilor autentificați să modifice numele lor.
+                        Numele utilizatorului trebuie să fie actualizat în baza de date.
+                    </li>
+                    <li>
+                        b) Schimbarea parolei:
+                        Aplicația trebuie să permită utilizatorilor autentificați să modifice parola lor.
+                        Parola utilizatorului trebuie să fie actualizată în baza de date.
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+
+        <section id="microdervicii">
+            <h3>Crearea automată a bazei de date pentru utilizatori și administratori și importul fișierului CSV </h3>
+            <section id=" jfd">
+                <h3>Descriere si prioritate:</h3>
+                <p>Funcționalitatea de creare automată a bazei de date și importul fișierului CSV permite aplicației să
+                    creeze automat structura necesară pentru a stoca informațiile despre utilizatori și administratori.
+                    De asemenea, permite importul datelor actorilor dintr-un fișier CSV în baza de date. Aceasta are o
+                    prioritate ridicată.</p>
+            </section>
+            <section id=" d">
+                <h3> Secvente de stimuli/raspunsuri: </h3>
+                <p>
+                    a) Crearea bazei de date pentru utilizatori și administratori:
+                    La inițializarea aplicației, se verifică dacă baza de date există deja.
+                    Dacă baza de date nu există, aplicația creează automat tabela necesară pentru utilizatori și
+                    administratori, cu coloanele corespunzătoare.
+                    Tabela este creată folosind un sistem de gestionare a bazelor de date (phpMyAdmin) și limbajul SQL
+                    pentru a defini schema.
+                </p>
+                <p>
+                    b) Importul datelor actorilor din fișierul CSV:
+                    La inițializarea aplicației, se verifică dacă baza de date există deja.
+                    Dacă baza de date nu există, aplicația creează automat tabela necesară pentru importul fisierului
+                    CSV.
+                    Aplicația procesează fișierul CSV și extrage datele relevante.
+                    Datele actorilor sunt importate în baza de date într-o tabelă corespunzătoare, cu coloanele
+                    adecvate.
+                </p>
+            </section>
+            <section id=" fs">
+                <h3>Cerinte functionale</h3>
+                <ul>
+                    <li>
+                        a) Crearea bazei de date pentru utilizatori și administratori:
+                        Aplicația trebuie să poată verifica dacă baza de date există deja și, în caz contrar, să poată
+                        crea tabela corespunzătoare pentru utilizatori și administratori.
+                        Structura tabelei trebuie să fie definită utilizând un sistem de gestionare a bazelor de date și
+                        limbajul SQL.
+                    </li>
+                    <li>
+                        b) Importul datelor actorilor din fișierul CSV:
+                        Aplicația trebuie să poată verifica dacă baza de date există deja și, în caz contrar, să poată
+                        crea tabela corespunzătoare pentru importul fisierului CSV.
+                        Datele din fișierul CSV trebuie să fie procesate și extrase într-un format adecvat pentru import
+                        în baza de date.
+                        Tabela pentru actori trebuie să fie creată în baza de date, iar datele importate trebuie să fie
+                        stocate în coloanele corespunzătoare.
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+
+
+    <!-- 5. Other Nonfunctional Requirements -->
+    <section id="user-interface" role="doc-introduction">
+        <h2>Alte cerinte nefunctionale</h2>
+        <section id="performance-requirements">
+            <h3>Cerinte de siguranta</h3>
+            <p>
+                Website-ul va fi proiectat astfel incat utilizatorii vor fi
+                nevoiti sa se logheze sau sa isi creeze un cont de utilizator pentru a putea accesa website-ul.
+                Astfel, site-ul solicita datele personale ale utilizatorilor.
+            </p>
+            <p>
+                Singurele date colectate de site-ul nostru vor fi adresele de email ale utilizatorilor si numele
+                acestora.
+            </p>
+        </section>
+        <section id="safety-requirements">
+            <h3>Cerinte de securitate</h3>
+            <p>
+                Datorita tokenurilor de acces generate la logarea in cont utilizatorii nu vor putea accesa website-ul
+                fara a fi logati sau fara a avea un cont de utilizator.
+            </p>
+        </section>
+        <section id="software-attributes">
+            <h3>Atributele calitatii software</h3>
+            <p>
+                Website-ul va fi accesibil si usor de utilizat pentru toate categoriile de utilizatori.
+                Informatiile vor fi permanent actualizate in functie de modificarile realizate la nivelul
+                bazei de date si verificate inainte de a fi incarcate pe site pentru a nu contine erori.
+            </p>
+        </section>
+        <section id="business-rules">
+            <h3>Reguli de afaceri</h3>
+            <p>
+                Doar administratorii vor avea dreptul de sterge useri.
+            </p>
+            <p>
+                Utilizatorii nu vor avea posibilitatea de a posta sau a incarca materiale sau comentarii pe
+                pagina noastra, ci o vor accesa doar din pozitia de observatori.
+            </p>
+        </section>
+    </section>
+</body>
+
+</html>

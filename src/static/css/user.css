@@ -1,0 +1,345 @@
+.container-user .content {
+  text-align: center;
+  height: fit-content;
+  margin-top: 10rem;
+}
+
+.container-user .content h3 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.container-user .content h3 span {
+  background: crimson;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 15px;
+}
+
+.container-user .content h1 {
+  font-size: 50px;
+  color: #fff;
+}
+
+.container-user .content h1 span {
+  color: crimson;
+}
+
+.form-container span {
+  font-size: 1rem;
+  color: crimson;
+}
+
+.form-container h6 {
+  font-size: 1rem;
+  color: black;
+}
+
+.form-container a {
+  color: black;
+  float: left;
+}
+
+.form-container .register-now {
+  text-decoration: underline;
+}
+
+.form-container a:hover {
+  color: var(--color-primary);
+}
+
+.container-user .content p {
+  color: #b3b3b3;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.container-user .content .btn {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 20px;
+  background: #333;
+  color: #fff;
+  margin: 8px 5px;
+  text-transform: capitalize;
+}
+
+.container-user .content .btn:hover {
+  background: crimson;
+}
+
+.container-user .content .buton-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .container-user .content .buton-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-user .content .buton-mobile {
+    display: block;
+  }
+}
+
+.user__forms {
+  height: 45rem;
+}
+
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.form-container form {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  text-align: center;
+  width: 500px;
+}
+
+.form-container form h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form-container form input,
+.form-container form select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 17px;
+  margin: 8px 0;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.form-container form select option {
+  background: #fff;
+}
+
+#admin_password_input {
+  display: none;
+}
+.form-container form input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 17px;
+  margin: 8px 0;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.form-container form .form-btn {
+  background: #fbd0d9;
+  color: crimson;
+  text-transform: capitalize;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container form .form-btn:hover {
+  background: crimson;
+  color: #fff;
+}
+
+.form-container form p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.form-container form p a {
+  color: crimson;
+}
+
+.form-container form .error-msg {
+  margin: 10px 0;
+  display: block;
+  background: crimson;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.form-container form .success-msg {
+  margin: 10px 0;
+  display: block;
+  background: lightgreen;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* profile dropdown list */
+
+li {
+  list-style-type: none;
+  position: relative;
+  padding: 0.625rem 0 0.5rem;
+}
+li ul {
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+  width: 13rem;
+  right: -6rem;
+  top: 2.2rem;
+  border-radius: 0.325rem;
+  gap: 0;
+  padding: 1rem 0rem;
+  opacity: 0;
+  box-shadow: 0px 0px 100px rgba(20, 18, 18, 0.25);
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 0.9;
+  display: flex;
+}
+
+.profile__menu .uil {
+  color: #888888;
+  transition: all 0.3s ease-out;
+}
+
+.profile__menu .uil:hover {
+  color: #ff9800;
+  transform: scale(1.25) translateY(-4px);
+  cursor: pointer;
+}
+
+.profile__menu .sub-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.725rem;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
+.profile__menu .sub-item:hover {
+  background-color: rgba(232, 232, 232, 0.4);
+}
+
+.profile__menu .sub-item:hover .uil {
+  color: #ff9800;
+  transform: scale(1.08) translateY(-2px);
+  cursor: pointer;
+}
+
+.profile__menu .sub-item:hover a {
+  color: #000;
+  cursor: pointer;
+}
+
+.profile__menu .sub-item a {
+  font-size: 0.85rem;
+  color: #888888;
+  font-weight: 500;
+  margin: 0.4rem 0;
+  flex: 1;
+}
+
+/* admin page */
+
+.container-admin .content {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.container-admin .content h3 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.container-admin .content h3 span {
+  background: crimson;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 15px;
+}
+
+.container-admin .content h1 {
+  font-size: 50px;
+  color: #fff;
+}
+
+.container-admin .content h1 span {
+  color: crimson;
+}
+
+/* tabel admin */
+
+.users h3 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.container-table-admin {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.7rem;
+  min-width: 10rem;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 20px rgba(255, 168, 168, 0.3);
+  width: 75rem;
+  font-weight: bold;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg2);
+  color: var(--color-white);
+  padding: 15px;
+}
+
+.table-wrapper {
+  max-height: 35rem;
+  max-width: 80rem;
+  overflow-y: scroll;
+  margin: 20px;
+}
+
+tr,
+td {
+  padding: 12px 15px;
+}
+
+td {
+  text-align: center;
+}
+
+tbody tr {
+  background-color: rgba(255, 0, 0, 0.118);
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: rgba(255, 78, 78, 0.26);
+}

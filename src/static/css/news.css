@@ -1,0 +1,257 @@
+/* ==================== HEADER =====================*/
+
+header {
+  height: 44rem;
+}
+
+.news__container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  background: var(--color-bg2);
+}
+
+.news__left {
+  background: var(--color-bg1);
+  margin: 1rem;
+}
+
+.new__image__header {
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.new__info {
+  padding: 2rem;
+}
+
+.new__info p {
+  margin: 1.2rem 0 1.2rem;
+  font-size: 0.9rem;
+}
+
+.new {
+  background: var(--color-bg2);
+  transition: var(--transition);
+  border: 1px solid transparent;
+  padding: 0.5rem;
+}
+
+.new:hover {
+  background: transparent;
+}
+
+.news__right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.news h3 a {
+  line-height: 0.75;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.new__image {
+  width: 100%;
+  padding-bottom: 0.3rem;
+}
+
+/* ==================== TRENDING =====================*/
+
+.trending__container {
+  height: 30rem;
+  margin-bottom: 5rem;
+}
+
+.trending__container .heading {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-white);
+  padding: 0.8rem;
+  margin: 1rem 0;
+  background: var(--color-bg1);
+}
+
+.trending {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  padding: 40px 0;
+}
+
+.trending .new {
+  background: var(--color-bg2);
+}
+
+.trending h3 a {
+  line-height: 0.75;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.trending a:hover {
+  color: var(--color-primary);
+}
+
+/* ==================== LATEST UPDATES =====================*/
+
+.latest-updates__container {
+  height: 50rem;
+}
+
+.latest-updates {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  padding: 40px 0;
+}
+
+.latest-updates .item-update {
+  background: var(--color-bg2);
+}
+
+.latest-updates__container .heading {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-white);
+  padding: 0.8rem;
+  margin: 1rem 0;
+  background: var(--color-bg1);
+}
+
+.latest-updates__container h3 a {
+  line-height: 0.75;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.latest-updates a:hover {
+  color: var(--color-primary);
+}
+
+.item-update:hover {
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(255, 168, 168, 0.3);
+}
+
+.item-update {
+  background: var(--color-bg1);
+  margin: 1rem;
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.item-update__image img {
+  height: 200px;
+  width: 350px;
+}
+
+.item-info {
+  padding: 2rem;
+}
+
+.item-info h4 {
+  font-size: 17px;
+}
+
+small {
+  color: #999;
+}
+
+.search-container.results img {
+  width: 500px;
+}
+
+/* ================= MEDIA QUERIES(TABLETS) ===============*/
+@media screen and (max-width: 1024px) {
+  /* ============ HEADER ===========*/
+  header {
+    height: auto;
+  }
+
+  .news__container {
+    gap: 1;
+    grid-template-columns: 1fr;
+  }
+
+  /* ============ TRENDING ===========*/
+  .trending__container {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .trending {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ============ LATEST UPDATES ===========*/
+  section {
+    padding: 1rem 0;
+  }
+
+  .latest-updates__container {
+    height: auto;
+  }
+
+  .item-update {
+    display: block;
+  }
+
+  .item-update__image img {
+    height: 350px;
+    width: 500px;
+    padding-left: 2rem;
+  }
+}
+
+/* ================= MEDIA QUERIES(PHONES) ===============*/
+@media screen and (max-width: 600px) {
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  /* ============ HEADER ===========*/
+  header {
+    height: auto;
+  }
+
+  .news__container {
+    grid-template-columns: 1fr;
+  }
+
+  /* ============ TRENDING ===========*/
+  .trending__container {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .trending {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ============ LATEST UPDATES ===========*/
+  .latest-updates__container {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .item-update {
+    display: block;
+  }
+
+  .item-update__image img {
+    height: 300px;
+    width: 400px;
+    padding-left: 2rem;
+  }
+}
